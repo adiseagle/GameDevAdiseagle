@@ -59,81 +59,113 @@
         <p>I am a backend programmer who is responsible for game systems.</p>
         <h2>Portfolio</h2>
         <ul>
-            <li>Car Simulation Project</li>
+            <li>3D folding game (Fold To Shapes)</li>
+            <a href="https://bakpia-games.itch.io/fold-to-shapes">Itch Io</a>
+            <a href="https://play.google.com/store/apps/details?id=com.BakpiaGames.FoldToShapes">Play Store</a>
+            <d>a puzle game about folding paper cutout into shapes</d>
+            <main class="main">
+                <section class="left">
+                    <video width="100%" height="auto" loop muted controls>
+                        <source src="D:\Film dan movies\Screen Record\2025-07-17 12-42-15.mp4" type="video/mp4" />
+                </section>
+                <section class="right">
+                    <video width="100%" height="auto" loop muted controls>
+                        <source src="https://cdn.discordapp.com/attachments/1260183819001008138/1326559149118718013/2025-01-08_21-29-09.mp4?ex=6879b23b&is=687860bb&hm=055a46d0aeccde9de0912717e89ab361036e4ff1b0951670812a9bf30942ac5d&" type="video/mp4" />
+                </section>
             </main>
+            <main class="main">
+                <section class="left">
+                    <video width="100%" height="auto" loop muted controls>
+                        <source src="https://cdn.discordapp.com/attachments/743485598383210528/1262319041603702794/2024-07-15_15-04-26.mp4?ex=68795778&is=687805f8&hm=a58bf705b8d791766fa19a33a7dfbd5cd7a615cf66af301fdbf1946c54709c25&" type="video/mp4" />
+                </section>
+                <section class="right">
+                    <p>since the "folds" are infinitely thin I can't use unity's colider so I made a custom colision just for this game. there's 3 version of it, the first version is the early working prototype on a non paralel computation, second version uses the gpu paraleliation so it's 40x faster but it failed to work on mobile, third version uses the new unity's dots system which ran code in paralel on the cpu which is what the release game is using.</p>
+            </main>
+            <main class="main">
+                <section class="left">
+                    <video width="100%" height="auto" loop muted controls>
+                        <source src="D:\Film dan movies\Screen Record\2025-07-17 15-06-51.mp4" type="video/mp4" />
+                </section>
+                <section class="right">
+                    <p>the "folds" also has outlines. using texture makes it looked blury so I made a function that generates another geometry around it to make an outline that's sharp and crisp.</p>
+            </main>
+        </ul>
+        <ul>
+            <li>Car Simulation Project</li>
             <d>a personal project of mine exploring physics and geometry</d>
             <main class="main">
-                    <section class="left">
+                <section class="left">
                     <video width="100%" height="auto" loop muted controls>
                         <source src="https://adiseagle.github.io/GameDevAdiseagle/video/CarDriving.mp4" type="video/mp4" />
-                    </section>
-                    <section class="right">
+                </section>
+                <section class="right">
                     <video width="100%" height="auto" loop muted controls>
                         <source src="https://adiseagle.github.io/GameDevAdiseagle/video/WheelTurningDemonstration.mp4" type="video/mp4" />
-                    </section>
+                </section>
+            </main>
             <main class="main">
-                    <section class="left">
+                <section class="left">
                     <video width="100%" height="auto" loop muted controls>
                         <source src="https://adiseagle.github.io/GameDevAdiseagle/video/SuspensionDemonstration.mp4" type="video/mp4" />
-                    </section>
-                    <section class="right">
+                </section>
+                <section class="right">
                     <p>the technical highlight is the suspension physic model that I made from the ground up, it closely mimics real life car suspension behaviour based on my theory.</p>
             </main>
             <main class="main">
-                    <section class="left">
+                <section class="left">
                     <video width="100%" height="auto" loop muted controls>
                         <source src="https://adiseagle.github.io/GameDevAdiseagle/video/MacphersonStrutSuspension.mp4" type="video/mp4" />
-                    </section>
-                    <section class="right">
+                </section>
+                <section class="right">
                     <p>one of the suspension is the Macpherson Strut type. it's calculated using vector math extensively with it only need a position and a normal plane as input. it achieves the inverse kinematics through the use of itteration and clever uses of trgonometry.</p>
             </main>
             <main class="main">
-                    <section class="left">
+                <section class="left">
                     <video width="100%" height="auto" loop muted controls>
                         <source src="https://adiseagle.github.io/GameDevAdiseagle/video/DoubleWishboneSuspension.mp4" type="video/mp4" />
-                    </section>
-                    <section class="right">
+                </section>
+                <section class="right">
                     <p>this is a Double Wishbone type. it's calculated similar to the previous type but with an extra linkage. but that's not all</p>
             </main>
             <main class="main">
-                    <section class="left">
+                <section class="left">
                     <video width="100%" height="auto" loop muted controls>
                         <source src="https://adiseagle.github.io/GameDevAdiseagle/video/AntiRollbarDemonstration.mp4" type="video/mp4" />
-                    </section>
-                    <section class="right">
+                </section>
+                <section class="right">
                     <p>this system also supports anti rollbar and it acts as a physical bar that get twisted on 2 ends much like the real one.</p>
             </main>
             <br>
             <li>unnanounced fps infiltation mission game (WIP)</li>
             <d>a game about infiltrating secret weapon facility that uses robot for war.</d>
             <main class="main">
-                    <section class="left">
+                <section class="left">
                     <video width="100%" height="auto" loop muted controls>
                         <source src="https://adiseagle.github.io/GameDevAdiseagle/video/Infiltration Gameplay Concept.mp4" type="video/mp4" />
-                    </section>
-                    <section class="right">
+                </section>
+                <section class="right">
                     <p>gameplay in concept revolves around hacking and controlling, I coded these feature but it's not complete just yet. the trickiest part is the UI since it uses the new unity UI toolkit, it took some experimenting to see what works and what doesn't.</p>
             </main>
             <main class="main">
-                    <section class="left">
+                <section class="left">
                     <video width="100%" height="auto" loop muted controls>
                         <source src="https://adiseagle.github.io/GameDevAdiseagle/video/AINavigating.mp4" type="video/mp4" />
-                    </section>
-                    <section class="right">
+                </section>
+                <section class="right">
                     <p>I also coded the environment (room, obstacle and doors atm) so I can make the AI know its surrounding without the use of navmesh. the AI can navigate through the environment and can go from one end to the other end of the map if necessary. there's new feature I'm still trying figure out implementing and it's the awareness and tasks.</p>
             </main>
             <main class="main">
-                    <section class="left">
+                <section class="left">
                     <video width="100%" height="auto" loop muted controls>
                         <source src="https://adiseagle.github.io/GameDevAdiseagle/video/TaskAndLure.mp4" type="video/mp4" />
-                    </section>
-                    <section class="right">
+                </section>
+                <section class="right">
                     <p>at this current state it can only handle navigation tasks and be lured.</p>
             </main>
         </ul>
         <h2>Contact</h2>
         <p>Email: adistya.herlangga@gmail.com</p>
-        <p>Phone: +6285212236865</p>
+        <p>Phone: +62851212236865</p>
     </div>
 </body>
 </html>
