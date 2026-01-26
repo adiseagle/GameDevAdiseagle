@@ -1,173 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Dev Adiseagle</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adiseagle's Game Dev Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
             margin: 0;
-            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
         }
+
+        header, section, footer {
+            padding: 2rem;
+        }
+
         header {
-            background-color: #333;
-            color: #fff;
+            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
             text-align: center;
-            padding: 1rem;
         }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 1rem;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00ffff;
         }
-        .main {
+
+        .hero {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+        .cta-button {
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #00ffff;
+            color: #121212;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        /* Tabs */
+        .tabs {
             display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .left {
-            width: 49%;
-            height: 100%;
-            margin-right: 1%;
-        }
-        .right {
-            width: 49%;
-            height: 100%;
-            margin-left: 1%;
-        }
-        h1 {
-            font-size: 2rem;
+            gap: 1rem;
             margin-bottom: 1rem;
         }
-        p {
-            font-size: 1rem;
-            line-height: 1.5;
+
+        .tab-button {
+            padding: 0.6rem 1.2rem;
+            background: #1e1e1e;
+            border: none;
+            border-radius: 6px;
+            color: #00ffff;
+            cursor: pointer;
+            font-family: 'Orbitron', sans-serif;
+            transition: background 0.3s;
+        }
+
+            .tab-button.active {
+                background: #00ffff;
+                color: #121212;
+            }
+
+        .tab-panel {
+            display: none;
+        }
+
+            .tab-panel.active {
+                display: block;
+            }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+            .card img, .card video {
+                width: 100%;
+                border-radius: 6px;
+                margin-top: 0.75rem;
+                box-shadow: 0 0 12px rgba(0, 255, 255, 0.25);
+            }
+        .video-description {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin: 0.5rem 0 1rem;
+            text-align: left;
+        }
+
+        .extra-content {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        .card.expanded .extra-content {
+            display: block;
+        }
+
+
+        .expand-btn {
+            margin-top: 0.75rem;
+            padding: 0.5rem 1rem;
+            background: #00ffff;
+            color: #121212;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input, textarea {
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+        }
+
+            input[type="submit"] {
+                background-color: #00ffff;
+                color: #121212;
+                cursor: pointer;
+            }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Adistya Herlangga</h1>
-        <p>Unity Game Developer</p>
+
+    <header class="hero">
+        <h1>Adistya Herlangga - Unity Game Developer</h1>
+        <p>Programming & 3D Modeling</p>
     </header>
-    <div class="container">
-        <h2>About Me</h2>
-        <p>I am a backend programmer who is responsible for game systems.</p>
-        <h2>Portfolio</h2>
-        <ul>
-            <li>3D folding game (Fold To Shapes)</li>
-            <a href="https://bakpia-games.itch.io/fold-to-shapes">Itch Io</a>
-            <a href="https://play.google.com/store/apps/details?id=com.BakpiaGames.FoldToShapes">Play Store</a>
-            <d>a puzle game about folding paper cutout into shapes</d>
-            <main class="main">
-                <section class="left">
-                    <video width="100%" height="auto" loop muted controls>
-                        <source src="https://adiseagle.github.io/GameDevAdiseagle/video/FoldToShapes.mp4" type="video/mp4" />
-                </section>
-                <section class="right">
-                    <video width="100%" height="auto" loop muted controls>
-                        <source src="https://adiseagle.github.io/GameDevAdiseagle/video/EifelTowerSolve.mp4" type="video/mp4" />
-                </section>
-            </main>
-            <main class="main">
-                <section class="left">
-                    <video width="100%" height="auto" loop muted controls>
-                        <source src="https://adiseagle.github.io/GameDevAdiseagle/video/TriangleIntersect.mp4" type="video/mp4" />
-                </section>
-                <section class="right">
-                    <p>since the "folds" are infinitely thin I can't use unity's colider so I made a custom colision just for this game. there's 3 version of it, the first version is the early working prototype on a non paralel computation, second version uses the gpu paraleliation so it's 40x faster but it failed to work on mobile, third version uses the new unity's dots system which ran code in paralel on the cpu which is what the release game is using.</p>
-            </main>
-            <main class="main">
-                <section class="left">
-                    <video width="100%" height="auto" loop muted controls>
-                        <source src="https://adiseagle.github.io/GameDevAdiseagle/video/OutlineGeneration.mp4" type="video/mp4" />
-                </section>
-                <section class="right">
-                    <p>the "folds" also has outlines. using texture makes it looked blury so I made a function that generates another geometry around it to make an outline that's sharp and crisp.</p>
-            </main>
-        </ul>
-        <ul>
-            <li>Car Simulation Project</li>
-            <d>a personal project of mine exploring physics and geometry</d>
-            <main class="main">
-                <section class="left">
-                    <video width="100%" height="auto" loop muted controls>
-                        <source src="https://adiseagle.github.io/GameDevAdiseagle/video/CarDriving.mp4" type="video/mp4" />
-                </section>
-                <section class="right">
-                    <video width="100%" height="auto" loop muted controls>
-                        <source src="https://adiseagle.github.io/GameDevAdiseagle/video/WheelTurningDemonstration.mp4" type="video/mp4" />
-                </section>
-            </main>
-            <main class="main">
-                <section class="left">
-                    <video width="100%" height="auto" loop muted controls>
-                        <source src="https://adiseagle.github.io/GameDevAdiseagle/video/SuspensionDemonstration.mp4" type="video/mp4" />
-                </section>
-                <section class="right">
-                    <p>the technical highlight is the suspension physic model that I made from the ground up, it closely mimics real life car suspension behaviour based on my theory.</p>
-            </main>
-            <main class="main">
-                <section class="left">
-                    <video width="100%" height="auto" loop muted controls>
-                        <source src="https://adiseagle.github.io/GameDevAdiseagle/video/MacphersonStrutSuspension.mp4" type="video/mp4" />
-                </section>
-                <section class="right">
-                    <p>one of the suspension is the Macpherson Strut type. it's calculated using vector math extensively with it only need a position and a normal plane as input. it achieves the inverse kinematics through the use of itteration and clever uses of trigonometry.</p>
-            </main>
-            <main class="main">
-                <section class="left">
-                    <video width="100%" height="auto" loop muted controls>
-                        <source src="https://adiseagle.github.io/GameDevAdiseagle/video/DoubleWishboneSuspension.mp4" type="video/mp4" />
-                </section>
-                <section class="right">
-                    <p>this is a Double Wishbone type. it's calculated similar to the previous type but with an extra linkage. but that's not all</p>
-            </main>
-            <main class="main">
-                <section class="left">
-                    <video width="100%" height="auto" loop muted controls>
-                        <source src="https://adiseagle.github.io/GameDevAdiseagle/video/AntiRollbarDemonstration.mp4" type="video/mp4" />
-                </section>
-                <section class="right">
-                    <p>this system also supports anti rollbar and it acts as a physical bar that get twisted on 2 ends much like the real one.</p>
-            </main>
-            <br>
-            <li>unnanounced fps infiltation mission game (WIP)</li>
-            <d>a game about infiltrating secret weapon facility that uses robot for war.</d>
-            <main class="main">
-                <section class="left">
-                    <video width="100%" height="auto" loop muted controls>
-                        <source src="https://adiseagle.github.io/GameDevAdiseagle/video/Infiltration Gameplay Concept.mp4" type="video/mp4" />
-                </section>
-                <section class="right">
-                    <p>gameplay in concept revolves around hacking and controlling, I coded these feature but it's not complete just yet. the trickiest part is the UI since it uses the new unity UI toolkit, it took some experimenting to see what works and what doesn't.</p>
-            </main>
-            <main class="main">
-                <section class="left">
-                    <video width="100%" height="auto" loop muted controls>
-                        <source src="https://adiseagle.github.io/GameDevAdiseagle/video/AINavigating.mp4" type="video/mp4" />
-                </section>
-                <section class="right">
-                    <p>I also coded the environment (room, obstacle and doors atm) so I can make the AI know its surrounding without the use of navmesh. the AI can navigate through the environment and can go from one end to the other end of the map if necessary. there's new feature I'm still trying figure out implementing and it's the awareness and tasks.</p>
-            </main>
-            <main class="main">
-                <section class="left">
-                    <video width="100%" height="auto" loop muted controls>
-                        <source src="https://adiseagle.github.io/GameDevAdiseagle/video/TaskAndLure.mp4" type="video/mp4" />
-                </section>
-                <section class="right">
-                    <p>at this current state it can only handle navigation tasks and be lured.</p>
-            </main>
-        </ul>
-        <h2>Contact</h2>
-        <p>Email: adistya.herlangga@gmail.com</p>
-        <p>Phone: +6285258266924</p>
-    </div>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I’m a passionate game developer with a love for both programming and 3D modeling.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-button active" data-tab="programming">Programming</button>
+                <button class="tab-button" data-tab="modelling">Modeling</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+
+                <!-- Programming Projects -->
+                <div id="programming" class="tab-panel active">
+                    <div class="projects-grid">
+                        <!-- Fold To Shapes -->
+                        <div class="card">
+                            <h3>Fold To Shapes</h3>
+                            <p>A puzzle-based project exploring folding mechanics and geometric transformations.</p>
+
+                            <video controls>
+                                <source src="https://adiseagle.github.io/GameDevAdiseagle/video/FoldToShapes.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <button class="expand-btn">Show More</button>
+                            <div class="extra-content">
+
+                                <video controls>
+                                    <source src="https://adiseagle.github.io/GameDevAdiseagle/video/EifelTowerSolve.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <p class="video-description">Main controller of the folding system responsible for setting up and running the whole gameplay loop</p>
+
+                                <video controls>
+                                    <source src="https://adiseagle.github.io/GameDevAdiseagle/video/TriangleIntersect.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <p class="video-description">Since the "folds" are infinitely thin I can't use Unity's collider so I made a custom collision just for this game. There's 3 versions of it: the first version is the early working prototype on a non-parallel computation, the second version uses GPU parallelization so it's 40x faster but it failed to work on mobile, and the third version uses Unity's DOTS system which ran code in parallel on the CPU — this is what the release game is using.</p>
+
+                                <video controls>
+                                    <source src="https://adiseagle.github.io/GameDevAdiseagle/video/OutlineGeneration.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <p class="video-description">The "folds" also have outlines. Using textures made them look blurry, so I created a function that generates another geometry around them to make outlines that are sharp and crisp.</p>
+                            </div>
+                        </div>
+                        <!-- Car Simulation Project -->
+                        <div class="card">
+                            <h3>Car Simulation Project</h3>
+                            <p>A personal project of mine exploring physics and geometry.</p>
+
+                            <video controls>
+                                <source src="https://adiseagle.github.io/GameDevAdiseagle/video/CarDriving.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <button class="expand-btn">Show More</button>
+                            <div class="extra-content">
+                                <video controls>
+                                    <source src="https://adiseagle.github.io/GameDevAdiseagle/video/WheelTurningDemonstration.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <p class="video-description">Realistic car's steering effects of the car during stand still shifting the car slightly.</p>
+
+                                <video controls>
+                                    <source src="https://adiseagle.github.io/GameDevAdiseagle/video/SuspensionDemonstration.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <p class="video-description">The technical highlight is the suspension physic model that I made from the ground up, it closely mimics real life car suspension behaviour based on my theory.</p>
+
+                                <video controls>
+                                    <source src="https://adiseagle.github.io/GameDevAdiseagle/video/MacphersonStrutSuspension.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <p class="video-description">One of the suspension is the Macpherson Strut type. It's calculated using vector math extensively with it only need a position and a normal plane as input. It achieves the inverse kinematics through the use of iteration and clever uses of trigonometry.</p>
+
+                                <video controls>
+                                    <source src="https://adiseagle.github.io/GameDevAdiseagle/video/DoubleWishboneSuspension.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <p class="video-description">This is a Double Wishbone type. It's calculated similar to the previous type but with an extra linkage. But that's not all.</p>
+
+                                <video controls>
+                                    <source src="https://adiseagle.github.io/GameDevAdiseagle/video/AntiRollbarDemonstration.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <p class="video-description">This system also supports anti rollbar and it acts as a physical bar that gets twisted on 2 ends much like the real one.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modeling Projects -->
+                <div id="modelling" class="tab-panel">
+                    <div class="projects-grid">
+                        <!-- Mach4 -->
+                        <div class="card">
+                            <h3>Speed Racer Mach4</h3>
+                            <p>Modelled using perpective images from the movie</p>
+                            <img src="D:\Dokumen-dokumen\Portfolio html page\Pictures\SpeedRacerMach4-0.png">
+                            <button class="expand-btn">Show More</button>
+                            <div class="extra-content">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/SpeedRacerMach4-1.png">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/SpeedRacerMach4-2.png">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/SpeedRacerMach4-3.png">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/SpeedRacerMach4-4.png">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/SpeedRacerMach4-5.png">
+                                <img src="D:\models\Mach 4 UV map.png">
+                                <p>UV Map</p>
+                            </div>
+                        </div>
+                        <!-- Sports Car -->
+                        <div class="card">
+                            <h3>Sports Car</h3>
+                            <p></p>
+                            <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/SportsCar0.png">
+                            <button class="expand-btn">Show More</button>
+                            <div class="extra-content">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/SportsCar1.png">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/SportsCarTopo0.png">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/SportsCarTopo1.png">
+                            </div>
+                        </div>
+                        <!-- Porsche -->
+                        <div class="card">
+                            <h3>Porsche Car lookalike</h3>
+                            <p>An optimized model for mobile games</p>
+                            <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/Pors0.png">
+                            <button class="expand-btn">Show More</button>
+                            <div class="extra-content">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/PorsTopo0.png">
+                                <p>Main Body has 2230 tris</p>
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/Pors1.png">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/PorsTopo1.png">
+                                <p>Each wheel has 1267 tris</p>
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/Pors2.png">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/PorsTopo2.png">
+                                <p>total poly count is 7313</p>
+                            </div>
+                        </div>
+                        <!-- Dragon -->
+                        <div class="card">
+                            <h3>Fold To Shapes Dragon</h3>
+                            <p>Flat on all surface, fully unwraped and can be folded as game level</p>
+                            <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/DragonFoldModel0.png">
+                            <button class="expand-btn">Show More</button>
+                            <div class="extra-content">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/DragonFoldModel1.png">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/DragonFoldModel2.png">
+                            </div>
+                        </div>
+                        <!-- Elephant -->
+                        <div class="card">
+                            <h3>Fold To Shapes Elephant</h3>
+                            <p>Flat on all surface, fully unwraped and can be folded as game level</p>
+                            <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/ElephantFoldModel0.png">
+                            <button class="expand-btn">Show More</button>
+                            <div class="extra-content">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/ElephantFoldModel1.png">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/ElephantFoldModel2.png">
+                            </div>
+                        </div>
+                        <!-- Grass Hopper -->
+                        <div class="card">
+                            <h3>Fold To Shapes Grass Hopper</h3>
+                            <p>Flat on all surface, fully unwraped and can be folded as game level</p>
+                            <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/GrashopperFoldModel0.png">
+                            <button class="expand-btn">Show More</button>
+                            <div class="extra-content">
+                                <img src="https://raw.githubusercontent.com/adiseagle/GameDevAdiseagle/refs/heads/main/Pictures/GrashopperFoldModel1.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanels.forEach(panel => panel.classList.remove('active'));
+
+                button.classList.add('active');
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.expand-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Find the card that contains THIS button
+                const card = button.closest('.card');
+
+                // Toggle expanded state only for this card
+                card.classList.toggle('expanded');
+
+                // Update button text
+                button.textContent = card.classList.contains('expanded')
+                    ? 'Show Less'
+                    : 'Show More';
+            });
+        });
+
+    </script>
+
 </body>
 </html>
-
-
